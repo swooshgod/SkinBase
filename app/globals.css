@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FDFAF7;
+  --surface: #FFFFFF;
+  --surface-warm: #F5F0EA;
+  --primary: #1B2B4B;
+  --primary-dark: #111C30;
+  --primary-mid: #253860;
+  --primary-light: #FBE9E4;
+  --accent: #E8856A;
+  --accent-light: #F5C4B5;
+  --accent-soft: #FBE9E4;
+  --gold: #E8856A;
+  --gold-light: #F5C4B5;
+  --text-1: #1C1917;
+  --text-2: #78716C;
+  --text-3: #A8A29E;
+  --border: #E7DFD5;
+  --shadow: rgba(28,25,23,0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  color-scheme: light only;
+  background: #FDFAF7;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  background: #FDFAF7;
+  color: #1C1917;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Card utility */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(28,25,23,0.06);
+}
+
+/* Shimmer for loading states */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #F5F0EA 25%, #EDE5D8 50%, #F5F0EA 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Pulse for camera icon */
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.pulse { animation: pulse-scale 2s ease-in-out infinite; }
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
