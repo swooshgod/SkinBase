@@ -242,7 +242,7 @@ function ActiveRoutineContent() {
   // Redirect if quiz not completed
   if (!quizResults.completed) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-5" style={{ background: '#FDFAF7' }}>
+      <div className="fixed inset-0 flex items-center justify-center px-5 z-50" style={{ background: '#FDFAF7' }}>
         <div className="text-center">
           <p style={{ color: '#78716C' }}>Please complete the quiz first</p>
         </div>
@@ -254,7 +254,7 @@ function ActiveRoutineContent() {
   if (phase === 'start') {
     return (
       <div
-        className="min-h-screen flex flex-col items-center justify-center px-6"
+        className="fixed inset-0 flex flex-col items-center justify-center px-6 z-50"
         style={{ background: 'linear-gradient(160deg, #FFFBF2, #FBE9E4)' }}
       >
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-sm w-full">
@@ -302,7 +302,7 @@ function ActiveRoutineContent() {
   if (phase === 'photo') {
     return (
       <div
-        className="min-h-screen flex flex-col items-center justify-center px-6"
+        className="fixed inset-0 flex flex-col items-center justify-center px-6 z-50"
         style={{ background: 'linear-gradient(135deg, #FFFBF2, #FBE9E4)' }}
       >
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center max-w-sm">
@@ -330,7 +330,7 @@ function ActiveRoutineContent() {
   if (phase === 'done') {
     return (
       <div
-        className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden"
+        className="fixed inset-0 flex flex-col items-center justify-center px-6 z-50 overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #FBE9E4, #F5C4B5)' }}
       >
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center max-w-sm z-10">
@@ -400,7 +400,7 @@ function ActiveRoutineContent() {
 
   return (
     <div
-      className="fixed inset-0 flex flex-col select-none"
+      className="fixed inset-0 flex flex-col select-none z-50"
       style={{ background: '#FDFAF7', touchAction: 'manipulation' }}
       onClick={handleAdvance}
     >
@@ -429,61 +429,59 @@ function ActiveRoutineContent() {
             transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             className="flex-1 flex flex-col px-6 pt-4 pb-2"
           >
-            {/* Action verb — large and bold at top */}
-            <motion.p
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.15, duration: 0.3 }}
-              className="font-black uppercase tracking-widest text-center mb-4"
-              style={{ fontSize: 44, color: '#1B2B4B', letterSpacing: '0.12em' }}
-            >
-              {verb}
-            </motion.p>
-
-            {/* Product image — large, centered */}
-            <div className="flex justify-center mb-4">
+            {/* Action verb + product image row */}
+            <div className="flex items-center justify-center gap-4 mb-3">
               <div
-                className="rounded-3xl flex items-center justify-center overflow-hidden"
-                style={{ width: 160, height: 160, background: gradient }}
+                className="rounded-2xl flex items-center justify-center overflow-hidden flex-shrink-0"
+                style={{ width: 88, height: 88, background: gradient }}
               >
                 {currentStepData.product.amazonImageUrl ? (
                   <img
                     src={currentStepData.product.amazonImageUrl}
                     alt={currentStepData.product.name}
-                    style={{ width: 150, height: 150, objectFit: 'contain' }}
+                    style={{ width: 80, height: 80, objectFit: 'contain' }}
                     draggable={false}
                   />
                 ) : (
-                  <span style={{ fontSize: 72 }}>{currentStepData.slot.emoji}</span>
+                  <span style={{ fontSize: 48 }}>{currentStepData.slot.emoji}</span>
                 )}
               </div>
+              <motion.p
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.15, duration: 0.3 }}
+                className="font-black uppercase tracking-widest"
+                style={{ fontSize: 36, color: '#1B2B4B', letterSpacing: '0.1em' }}
+              >
+                {verb}
+              </motion.p>
             </div>
 
-            {/* Product name — big, readable */}
-            <div className="text-center mb-3">
-              <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: '#A8A29E' }}>
+            {/* Product name */}
+            <div className="text-center mb-2">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-0.5" style={{ color: '#A8A29E' }}>
                 {currentStepData.product.brand}
               </p>
               <h1
-                className="text-2xl font-bold leading-tight px-2"
+                className="text-xl font-bold leading-tight px-2"
                 style={{ color: '#1C1917' }}
               >
                 {currentStepData.product.name}
               </h1>
             </div>
 
-            {/* How-to instruction — clear and readable */}
-            <div className="rounded-2xl p-5 mb-3" style={{ background: '#F5F0EA' }}>
-              <p className="text-base leading-relaxed text-center" style={{ color: '#44403C' }}>
+            {/* How-to instruction */}
+            <div className="rounded-2xl p-4 mb-2" style={{ background: '#F5F0EA' }}>
+              <p className="text-sm leading-relaxed text-center" style={{ color: '#44403C' }}>
                 {currentInstruction.instruction}
               </p>
             </div>
 
             {/* Pro tip */}
             {currentInstruction.tip && (
-              <div className="rounded-2xl p-4" style={{ background: '#FBE9E4', border: '1px solid #F5C4B5' }}>
-                <p className="text-xs font-bold mb-1 text-center" style={{ color: '#E8856A', letterSpacing: '0.05em' }}>💡 PRO TIP</p>
-                <p className="text-sm leading-relaxed text-center" style={{ color: '#1C1917' }}>{currentInstruction.tip}</p>
+              <div className="rounded-xl p-3" style={{ background: '#FBE9E4', border: '1px solid #F5C4B5' }}>
+                <p className="text-xs font-bold mb-0.5 text-center" style={{ color: '#E8856A', letterSpacing: '0.05em' }}>💡 PRO TIP</p>
+                <p className="text-xs leading-relaxed text-center" style={{ color: '#1C1917' }}>{currentInstruction.tip}</p>
               </div>
             )}
           </motion.div>
