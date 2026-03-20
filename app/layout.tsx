@@ -52,7 +52,7 @@ export default function RootLayout({
         <StoreHydration />
         <AuthProvider>
           <Header />
-          <main className="pt-14 pb-20">
+          <main className="pb-20" style={{ paddingTop: 'calc(env(safe-area-inset-top) + 3.5rem)' }}>
             {children}
           </main>
         </AuthProvider>

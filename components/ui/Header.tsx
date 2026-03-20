@@ -62,8 +62,12 @@ export default function Header() {
     <>
       {/* Top Header */}
       <header
-        className="fixed top-0 left-0 right-0 z-[100]"
-        style={{ background: '#FDFAF7', borderBottom: '1px solid #E7DFD5' }}
+        className="fixed top-0 left-0 right-0 z-[100] backdrop-blur-md"
+        style={{
+          background: 'rgba(253,250,247,0.92)',
+          borderBottom: '1px solid #E7DFD5',
+          paddingTop: 'env(safe-area-inset-top)',
+        }}
       >
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
           {/* Logo */}
