@@ -42,6 +42,9 @@ export default function PrivacyPolicy() {
         <li><strong>Replicate:</strong> AI image processing</li>
       </ul>
 
+      <h2>Health & Pregnancy Disclaimer</h2>
+      <p>SkinBase is not a medical application. Any information regarding ingredient safety, including "pregnancy safe" designations, is for informational purposes only and is not a guarantee. Always consult with a qualified healthcare professional before making skincare decisions during pregnancy or while breastfeeding.</p>
+
       <h2>Data Security</h2>
       <p>We implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
 

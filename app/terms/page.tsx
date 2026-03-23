@@ -24,6 +24,11 @@ export default function TermsOfService() {
       <h2>AI Analysis Disclaimer</h2>
       <p><strong>SkinBase is not a medical device and does not provide medical advice.</strong> Our AI-powered skin analysis is for informational and educational purposes only. It is not a substitute for professional dermatological advice, diagnosis, or treatment. Always consult a qualified healthcare provider for skin concerns.</p>
 
+      <h2>Pregnancy Safety Disclaimer</h2>
+      <p><strong>Any "pregnancy safe" labels, filters, or recommendations provided by SkinBase are for informational purposes only and are NOT a guarantee of safety.</strong> Ingredient safety during pregnancy is a complex and evolving area of research. What is considered safe may vary based on individual health conditions, trimester, dosage, and formulation.</p>
+      <p><strong>Always consult with your healthcare professional, OB-GYN, or dermatologist</strong> before using any skincare product during pregnancy or while breastfeeding. SkinBase does not assume any liability for decisions made based on pregnancy safety information provided within the app.</p>
+      <p>Do not rely solely on SkinBase for determining the safety of any product or ingredient during pregnancy.</p>
+
       <h2>User Content</h2>
       <p>You retain ownership of photos and content you submit. By uploading content, you grant us a limited license to process it for the purpose of providing our services.</p>
 
