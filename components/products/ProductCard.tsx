@@ -95,11 +95,14 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
             {safetyTags.slice(0, 3).map((tag) => {
               const meta = SAFETY_TAG_META[tag];
               return (
-                <span key={tag} style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.03em', background: meta.color, color: meta.textColor, borderRadius: 20, padding: '2px 6px' }}>
-                  {meta.emoji} {meta.label}
+                <span key={tag} title={tag === 'pregnancy-safe' ? 'This is not a guarantee. Always consult your healthcare professional.' : ''} style={{ fontSize: 9, fontWeight: 700, letterSpacing: '0.03em', background: meta.color, color: meta.textColor, borderRadius: 20, padding: '2px 6px', cursor: tag === 'pregnancy-safe' ? 'help' : 'default' }}>
+                  {meta.emoji} {meta.label}{tag === 'pregnancy-safe' ? '*' : ''}
                 </span>
               );
             })}
+            {safetyTags.includes('pregnancy-safe' as any) && (
+              <p style={{ fontSize: 8, color: '#a1a1aa', marginTop: 2, lineHeight: 1.2 }}>*Not a guarantee. Consult your doctor.</p>
+            )}
           </div>
         )}
       </div>

@@ -51,6 +51,9 @@ export default function SafetyTagsStep() {
           );
         })}
       </div>
+      <p className="text-xs text-slate-400 text-center mt-4 px-4">
+        ⚠️ &quot;Pregnancy Safe&quot; labels are for informational purposes only and are not a guarantee of safety. Always consult with your healthcare professional or OB-GYN before using any skincare product during pregnancy.
+      </p>
     </div>
   );
 }

@@ -200,7 +200,7 @@ function ProductsPageContent() {
               ))}
             </div>
           </div>
-          {/* Safety */}
+          {/* Safety + disclaimer */}
           <div>
             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Safe For</p>
             <div className="flex flex-wrap gap-2 pb-1">
@@ -216,6 +216,7 @@ function ProductsPageContent() {
                 );
               })}
             </div>
+            <p className="text-[9px] text-slate-400 mt-2">⚠️ Safety labels are informational only, not guarantees. &quot;Pregnancy Safe&quot; does not constitute medical advice. Always consult your healthcare provider.</p>
           </div>
         </motion.div>
       )}
