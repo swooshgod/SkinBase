@@ -157,6 +157,9 @@ export default function IngredientsPage() {
           <p className="text-sm text-slate-500 mt-1">
             Learn what each ingredient does and how to use it safely
           </p>
+          <p className="text-[10px] text-slate-400 mt-1">
+            ⚠️ Ingredient information is for educational purposes only. Not a substitute for professional advice. Consult a dermatologist before using new active ingredients.
+          </p>
         </div>
 
         {/* Search */}

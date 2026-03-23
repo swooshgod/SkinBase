@@ -271,6 +271,9 @@ function AnalyzeContent({ onSwitchToTransform, sharedPhoto }: { onSwitchToTransf
               onShopProducts={handleShopProducts}
               onSeeTransform={handleSeeTransform}
             />
+            <p style={{ fontSize: 10, color: '#94a3b8', textAlign: 'center', marginTop: 12, padding: '0 16px', lineHeight: 1.4 }}>
+              ⚠️ This AI skin analysis is for informational and educational purposes only. It is not a medical diagnosis. Results may not be accurate for all skin types and conditions. Always consult a dermatologist or qualified healthcare professional for skin concerns, conditions, or before starting any new skincare regimen.
+            </p>
           </motion.div>
         )}
       </AnimatePresence>

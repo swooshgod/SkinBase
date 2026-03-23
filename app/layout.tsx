@@ -56,6 +56,14 @@ export default function RootLayout({
             {children}
           </main>
         </AuthProvider>
+        <footer style={{ padding: '16px 20px 32px', textAlign: 'center' }}>
+          <p style={{ fontSize: 9, color: '#a8a29e', lineHeight: 1.4, maxWidth: 500, margin: '0 auto' }}>
+            SkinBase is not a medical application and does not provide medical advice, diagnosis, or treatment. All recommendations, including AI skin analysis and product suggestions, are for informational and educational purposes only. Always consult a qualified dermatologist or healthcare professional for skin concerns. &quot;Pregnancy Safe&quot; labels are not guarantees — consult your doctor.
+          </p>
+          <p style={{ fontSize: 9, color: '#a8a29e', marginTop: 4 }}>
+            <a href="/privacy/" style={{ textDecoration: 'underline' }}>Privacy Policy</a> · <a href="/terms/" style={{ textDecoration: 'underline' }}>Terms of Service</a>
+          </p>
+        </footer>
       </body>
     </html>
   );
