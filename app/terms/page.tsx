@@ -25,7 +25,7 @@ export default function TermsOfService() {
       <p><strong>SkinBase is not a medical device and does not provide medical advice.</strong> Our AI-powered skin analysis is for informational and educational purposes only. It is not a substitute for professional dermatological advice, diagnosis, or treatment. Always consult a qualified healthcare provider for skin concerns.</p>
 
       <h2>Pregnancy Safety Disclaimer</h2>
-      <p><strong>Any "pregnancy safe" labels, filters, or recommendations provided by SkinBase are for informational purposes only and are NOT a guarantee of safety.</strong> Ingredient safety during pregnancy is a complex and evolving area of research. What is considered safe may vary based on individual health conditions, trimester, dosage, and formulation.</p>
+      <p><strong>Any &quot;pregnancy safe&quot; labels, filters, or recommendations provided by SkinBase are for informational purposes only and are NOT a guarantee of safety.</strong> Ingredient safety during pregnancy is a complex and evolving area of research. What is considered safe may vary based on individual health conditions, trimester, dosage, and formulation.</p>
       <p><strong>Always consult with your healthcare professional, OB-GYN, or dermatologist</strong> before using any skincare product during pregnancy or while breastfeeding. SkinBase does not assume any liability for decisions made based on pregnancy safety information provided within the app.</p>
       <p>Do not rely solely on SkinBase for determining the safety of any product or ingredient during pregnancy.</p>
 
@@ -41,7 +41,7 @@ export default function TermsOfService() {
       </ul>
 
       <h2>Limitation of Liability</h2>
-      <p>SkinBase is provided "as is" without warranties of any kind. We are not liable for any damages arising from your use of our services, including any reliance on AI-generated recommendations.</p>
+      <p>SkinBase is provided &quot;as is&quot; without warranties of any kind. We are not liable for any damages arising from your use of our services, including any reliance on AI-generated recommendations.</p>
 
       <h2>Termination</h2>
       <p>We reserve the right to terminate or suspend your account at our discretion if you violate these terms.</p>

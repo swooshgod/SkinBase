@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
       <p><strong>Last updated: March 22, 2026</strong></p>
 
       <h2>Introduction</h2>
-      <p>SkinBase ("we", "our", or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application and website.</p>
+      <p>SkinBase (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application and website.</p>
 
       <h2>Information We Collect</h2>
       <h3>Information You Provide</h3>
@@ -43,7 +43,7 @@ export default function PrivacyPolicy() {
       </ul>
 
       <h2>Health & Pregnancy Disclaimer</h2>
-      <p>SkinBase is not a medical application. Any information regarding ingredient safety, including "pregnancy safe" designations, is for informational purposes only and is not a guarantee. Always consult with a qualified healthcare professional before making skincare decisions during pregnancy or while breastfeeding.</p>
+      <p>SkinBase is not a medical application. Any information regarding ingredient safety, including &quot;pregnancy safe&quot; designations, is for informational purposes only and is not a guarantee. Always consult with a qualified healthcare professional before making skincare decisions during pregnancy or while breastfeeding.</p>
 
       <h2>Data Security</h2>
       <p>We implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
@@ -51,7 +51,7 @@ export default function PrivacyPolicy() {
       <h2>Your Rights</h2>
       <p>You may request to access, update, or delete your personal data at any time by contacting us.</p>
 
-      <h2>Children's Privacy</h2>
+      <h2>Children&apos;s Privacy</h2>
       <p>SkinBase is not intended for children under 13. We do not knowingly collect information from children under 13.</p>
 
       <h2>Changes to This Policy</h2>

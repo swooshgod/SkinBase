@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Product } from '@/types';
-import { getSafetyTags, SAFETY_TAG_META } from '@/lib/safetyTags';
+import { getSafetyTags, SafetyTag, SAFETY_TAG_META } from '@/lib/safetyTags';
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string; gradient: string }> = {
   cleanser:    { bg: '#E8F4FD', text: '#0369A1', gradient: 'linear-gradient(135deg, #E8F4FD, #C7E9F9)' },
@@ -100,7 +100,7 @@ export default function ProductCard({ product, onClick }: ProductCardProps) {
                 </span>
               );
             })}
-            {safetyTags.includes('pregnancy-safe' as any) && (
+            {safetyTags.includes('pregnancy-safe' as SafetyTag) && (
               <p style={{ fontSize: 8, color: '#a1a1aa', marginTop: 2, lineHeight: 1.2 }}>*Not a guarantee. Consult your doctor.</p>
             )}
           </div>
